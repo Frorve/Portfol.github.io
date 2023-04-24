@@ -6,7 +6,7 @@
 
 - 🌱 I’m currently learning **everything!**
 
-- 👨‍💻 All of my projects are available at [https://frorve.github.io/Portfol.github.io/] (Portfolio | Fran)
+- 👨‍💻 All of my projects are available at [frorve.github.io/Portfol.github.io](frorve.github.io/Portfol.github.io)
 
 - 💬 Ask me about **all you want to know!**
 
