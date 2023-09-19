@@ -161,6 +161,9 @@ b, strong {
     opacity: 0;
   }
 }
+#contatillo{
+  text-align: center;
+}
 .navbar {
   position: fixed;
   top: 0;
