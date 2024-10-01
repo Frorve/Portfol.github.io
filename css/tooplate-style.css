@@ -125,6 +125,7 @@ b, strong {
   top: 0;
   right: 0;
   left: 0;
+  width: 200%;
   animation: BottomTotop 4s linear infinite 0s;
 }
 .animated-item:nth-child(2n+2) {
