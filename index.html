@@ -15,7 +15,49 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/tooplate-style.css">
   <link rel="shortcut icon" href="images/project/icon.png">
+  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
 
+  <style>
+    /* ── Proyectos: tarjetas adaptadas al color mode ── */
+    .project-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
+      transition: box-shadow 0.3s;
+    }
+    .project-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+    }
+    .project-card-body {
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .project-card-body p {
+      line-height: 1.75;
+      margin: 0;
+    }
+    .project-card-footer {
+      padding: 16px 24px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    /* dark mode overrides */
+    .dark-mode .project-card {
+      background: #1a1a2e;
+      border-color: #2a2a4a;
+    }
+    .dark-mode .project-card-footer {
+      border-top-color: #2a2a4a;
+    }
+    .dark-mode #projects {
+      background: transparent !important;
+    }
+  </style>
 
 </head>
 
@@ -40,6 +82,12 @@
           </li>
           <li class="nav-item">
             <a href="#resume" class="nav-link"><span data-hover="Resume">Mi vida</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link"><span data-hover="Projects">Proyectos</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#certifications" class="nav-link"><span data-hover="Certifications">Certificaciones</span></a>
           </li>
           <li class="nav-item">
             <a href="#contact" class="nav-link"><span data-hover="Contact">Contacto</span></a>
@@ -96,7 +144,7 @@
     </div>
   </section>
 
-  <!-- FROMACION Y EXPERIENCIA -->
+  <!-- FORMACION Y EXPERIENCIA -->
   <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
     <div class="container">
       <div class="row">
@@ -135,9 +183,33 @@
                 <span>2024</span>
               </div>
               <div class="timeline-info">
-                <h3><span>Desarrollador Front-end</span></h3>
+                <h3><span>Estudiante en prácticas</span><small>Beebit</small></h3>
                 <p>
-                  Desarrollador Front-End con experiencia en la creación de interfaces de usuario utilizando React y Next.js. He trabajado en varios proyectos colaborativos, utilizando metodologías ágiles y herramientas como JIRA para la gestión de tareas. Mi enfoque ha estado en la creación de aplicaciones web responsive, optimización del rendimiento y la implementación de mejores prácticas de desarrollo.
+                  Desarrollador Full Stack en prácticas en Beebit (mar. 2024 – jun. 2024). Participé activamente en el diseño, desarrollo y mantenimiento de aplicaciones web, fortaleciendo habilidades en tecnologías Frontend y Backend e implementando soluciones prácticas.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>24-25</span>
+              </div>
+              <div class="timeline-info">
+                <h3><span>Desarrollador de Software</span><small>Beebit</small></h3>
+                <p>
+                  Desarrollador de Software en Beebit (jun. 2024 – jul. 2025). Participé activamente en el diseño, desarrollo y mantenimiento de aplicaciones web en un entorno colaborativo, fortaleciendo habilidades en tecnologías Frontend y Backend con React.js y JIRA.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2026</span>
+              </div>
+              <div class="timeline-info">
+                <h3><span>Técnico Administrativo de RAEEs</span><small>Grupo GUHILAR</small></h3>
+                <p>
+                  Profesional especializada en la gestión administrativa y operativa del área de Residuos de Aparatos Eléctricos y Electrónicos (RAEEs), con experiencia en el cumplimiento normativo y la coordinación del flujo documental completo del ciclo de residuos. Desde may. 2026.
                 </p>
               </div>
             </div>
@@ -165,8 +237,7 @@
               <div class="timeline-info">
                 <h3><span>Técnico en desarrollo de aplicaciones
                     multiplataforma</span></h3>
-                <p>Actualmente cursando el Grado Superior desarrollo de aplicaciones
-                  multiplataforma en MEDAC</p>
+                <p>Grado Superior en Desarrollo de Aplicaciones Multiplataforma en MEDAC</p>
               </div>
             </div>
           </div>
@@ -175,35 +246,169 @@
     </div>
   </section>
 
-  <!-- CONTACTOS -->
-  <section class="contact py-5" id="contact">
+  <!-- PROYECTOS -->
+  <section class="resume py-5" id="projects">
     <div class="container">
       <div class="row">
+        <div class="col-12 mb-4">
+          <h2>Proyectos personales</h2>
+        </div>
 
-        <div class="col-lg-5 mr-lg-5 col-12">
-          <div class="google-map w-100">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50860.99164048016!2d-3.6325572274937974!3d37.18093908805692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fce62d32c27d%3A0x9258f79dd3600d72!2sGranada!5e0!3m2!1ses!2ses!4v1682086651742!5m2!1ses!2ses"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
-          <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
-            <div class="contact-info-item">
-              <h3 class="mb-3 text-white">Contacto</h3>
-              <p><a href="mailto:fvfotura@gmail.com">fvfotura@gmail.com</a></p>
+        <!-- YGO Data Engineering -->
+        <div class="col-lg-6 col-12 mb-4">
+          <div class="project-card">
+            <div style="background:#474559; padding:20px 24px;">
+              <h4 style="color:#ffc200; margin:0 0 14px 0;">YGO Data Engineering</h4>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <span style="background:rgba(255,255,255,0.08); color:#ffffff; font-size:12px; font-weight:600; padding:5px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
+                  <span class="iconify" data-icon="simple-icons:dbt" style="color:#FF694B; font-size:16px;"></span> dbt
+                </span>
+                <span style="background:rgba(255,255,255,0.08); color:#ffffff; font-size:12px; font-weight:600; padding:5px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
+                  <span class="iconify" data-icon="simple-icons:snowflake" style="color:#29B5E8; font-size:16px;"></span> Snowflake
+                </span>
+                <span style="background:rgba(255,255,255,0.08); color:#ffffff; font-size:12px; font-weight:600; padding:5px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
+                  <span class="iconify" data-icon="logos:python" style="font-size:16px;"></span> Python
+                </span>
+              </div>
             </div>
-
-            <ul class="social-links">
-              <li><a href="https://www.linkedin.com/in/francisco-ortega-velasco-126120259/" class="uil uil-link"
-                  data-toggle="tooltip" data-placement="left" title="Linkedin"></a></li>
-            </ul>
+            <div class="project-card-body">
+              <p>
+                Pipeline de Data Engineering sobre el catálogo de cartas de <strong>Yu-Gi-Oh!</strong> con arquitectura medallion (Bronze → Silver → Gold). Implementa ingesta automática diaria desde la API pública de YGOPRODeck, simulación de precios mediante <strong>Movimiento Browniano</strong>, tres casos de uso analíticos (evolución de precios, arbitraje y popularidad) y un sistema completo de CI/CD con GitHub Actions y 225 tests automatizados.
+              </p>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/Frorve/YGO-Data-Engineering" target="_blank" class="btn custom-btn">
+                <span class="iconify" data-icon="mdi:github" style="font-size:18px; vertical-align:middle; margin-right:4px;"></span> Ver en GitHub
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="col-lg-6 col-12">
-          <div class="contact-form">
-            <h2 style="text-align: center;" class="mb-4">Si estas interesado, contacta conmigo!</h2>
+        <!-- Wormtech Biomass -->
+        <div class="col-lg-6 col-12 mb-4">
+          <div class="project-card">
+            <div style="background:#474559; padding:20px 24px;">
+              <h4 style="color:#ffc200; margin:0 0 14px 0;">Wormtech Biomass — TFG</h4>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <span style="background:rgba(255,255,255,0.08); color:#ffffff; font-size:12px; font-weight:600; padding:5px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
+                  <span class="iconify" data-icon="logos:react" style="font-size:16px;"></span> React
+                </span>
+                <span style="background:rgba(255,255,255,0.08); color:#ffffff; font-size:12px; font-weight:600; padding:5px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
+                  <span class="iconify" data-icon="simple-icons:directus" style="color:#6644FF; font-size:16px;"></span> Directus
+                </span>
+                <span style="background:rgba(255,255,255,0.08); color:#ffffff; font-size:12px; font-weight:600; padding:5px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
+                  <span class="iconify" data-icon="logos:javascript" style="font-size:16px;"></span> JavaScript
+                </span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <p>
+                Aplicación web React desarrollada como <strong>Trabajo de Fin de Grado</strong> para el control operativo de una planta de reciclaje. Incluye autenticación, dashboard de gestión de clientes, registro de entrada/salida de báscula con datos automáticos, <strong>generación de facturas y certificados en PDF</strong> e integración de un asistente ChatIA.
+              </p>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/Frorve/TFG-Wormtech-Biomass-Front" target="_blank" class="btn custom-btn">
+                <span class="iconify" data-icon="mdi:github" style="font-size:18px; vertical-align:middle; margin-right:4px;"></span> Ver en GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICACIONES -->
+  <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="certifications">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mb-4">Certificaciones</h2>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="timeline">
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2026</span>
+              </div>
+              <div class="timeline-info">
+                <h3><span>Claude Code 101</span><small>Anthropic</small></h3>
+                <p>Certificate of completion expedido en jun. 2026. ID de credencial: 7euzakqorjja</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="timeline">
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2026</span>
+              </div>
+              <div class="timeline-info">
+                <h3><span>Data Engineering: SQL, dbt, Snowflake, BigQuery y Power BI</span><small>Cívica</small></h3>
+                <p>Fundamentos de Data Engineering expedido en may. 2026. Aptitudes: Bases de datos, Diseño de bases de datos, SQL, dbt, Snowflake, BigQuery, Power BI y más.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="timeline">
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2026</span>
+              </div>
+              <div class="timeline-info">
+                <h3><span>dbt Fundamentals</span><small>dbt Labs</small></h3>
+                <p>Certificación en Data Build Tool (DBT) expedida en may. 2026. ID de credencial: 183913232</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact py-5" id="contact" style="background:#212121;">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+
+        <div class="col-12 mb-4">
+          <h2 style="color:#ffffff;">Contacto</h2>
+          <p style="color:rgba(255,255,255,0.55); font-size:16px; max-width:480px; margin:8px auto 0;">No dudes en contactarme. Estoy abierto a nuevas oportunidades y proyectos.</p>
+        </div>
+
+        <div class="col-12">
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-top:8px;">
+
+            <a href="mailto:fvfotura@gmail.com"
+               style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:50px; font-size:15px; font-weight:500; transition:background 0.25s, border-color 0.25s, color 0.25s;"
+               onmouseover="this.style.background='rgba(255,194,0,0.15)'; this.style.borderColor='#ffc200'; this.style.color='#ffc200';"
+               onmouseout="this.style.background='rgba(255,255,255,0.06)'; this.style.borderColor='rgba(255,255,255,0.12)'; this.style.color='#ffffff';">
+              <i class="uil uil-envelope" style="font-size:20px;"></i>
+              fvfotura@gmail.com
+            </a>
+
+            <a href="https://www.linkedin.com/in/francisco-ortega-velasco-126120259/" target="_blank"
+               style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:50px; font-size:15px; font-weight:500; transition:background 0.25s, border-color 0.25s, color 0.25s;"
+               onmouseover="this.style.background='rgba(10,102,194,0.25)'; this.style.borderColor='#0a66c2'; this.style.color='#5aabff';"
+               onmouseout="this.style.background='rgba(255,255,255,0.06)'; this.style.borderColor='rgba(255,255,255,0.12)'; this.style.color='#ffffff';">
+              <span class="iconify" data-icon="mdi:linkedin" style="font-size:20px;"></span>
+              LinkedIn
+            </a>
+
+            <a href="https://github.com/Frorve" target="_blank"
+               style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:50px; font-size:15px; font-weight:500; transition:background 0.25s, border-color 0.25s, color 0.25s;"
+               onmouseover="this.style.background='rgba(255,255,255,0.14)'; this.style.borderColor='rgba(255,255,255,0.5)'; this.style.color='#ffffff';"
+               onmouseout="this.style.background='rgba(255,255,255,0.06)'; this.style.borderColor='rgba(255,255,255,0.12)'; this.style.color='#ffffff';">
+              <span class="iconify" data-icon="mdi:github" style="font-size:20px;"></span>
+              GitHub
+            </a>
+
           </div>
         </div>
 
@@ -217,7 +422,7 @@
       <div class="row">
 
         <div class="col-lg-12 col-12">
-          <p class="copyright-text text-center">Copyright &copy; 2023 Francisco Ortega Velasco.</p>
+          <p class="copyright-text text-center">Copyright &copy; 2026 Francisco Ortega Velasco.</p>
         </div>
 
       </div>
