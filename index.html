@@ -18,6 +18,87 @@
   <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
 
   <style>
+    /* ── Foto de perfil circular ── */
+    .profile-photo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .profile-photo {
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      /* zoom 1.4× and pan to face (x≈56%, y≈15% from top) */
+      background-image: url('images/project/Foto Link.png');
+      background-size: 100% auto;
+      background-position: center 5%;
+      background-repeat: no-repeat;
+      border: 5px solid #ffc200;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      flex-shrink: 0;
+    }
+    @media (max-width: 992px) {
+      .profile-photo { width: 240px; height: 240px; margin-top: 32px; }
+    }
+
+    /* ── Animated text: override for 3 items (6s cycle, no overlap) ── */
+    .animated-info {
+      min-width: 380px;
+    }
+    .animated-item {
+      animation-duration: 6s !important;
+    }
+    @media (max-width: 580px) {
+      .animated-info { min-width: 240px; }
+      .animated-item { font-size: 26px !important; }
+    }
+
+    /* ── Tecnologías ── */
+    .tech-category {
+      margin-bottom: 32px;
+    }
+    .tech-category h5 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #ffc200;
+      margin-bottom: 14px;
+    }
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      background: #f0f0f0;
+      color: #353535;
+      border: 1px solid #e0e0e0;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .tech-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    }
+    .dark-mode .tech-pill {
+      background: #1e1e30;
+      color: #e0e0e0;
+      border-color: #2e2e4e;
+    }
+    .dark-mode .tech-pill:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    }
+    .dark-mode .tech-pill .iconify[style*="color:#333"] {
+      color: #cccccc !important;
+    }
+
     /* ── Proyectos: tarjetas adaptadas al color mode ── */
     .project-card {
       border-radius: 12px;
@@ -84,6 +165,9 @@
             <a href="#resume" class="nav-link"><span data-hover="Resume">Mi vida</span></a>
           </li>
           <li class="nav-item">
+            <a href="#technologies" class="nav-link"><span data-hover="Tech">Tecnologías</span></a>
+          </li>
+          <li class="nav-item">
             <a href="#projects" class="nav-link"><span data-hover="Projects">Proyectos</span></a>
           </li>
           <li class="nav-item">
@@ -118,12 +202,13 @@
               <span class="mr-2">¡Hola! Soy</span>
               <div class="animated-info">
                 <span class="animated-item">Francisco</span>
-                <span class="animated-item">Desarrollador Front-end</span>
+                <span class="animated-item">Full-Stack Developer</span>
+                <span class="animated-item">Data Engineering</span>
               </div>
             </h1>
 
             <p>
-              Soy un joven de 25 años, apasionado por la tecnología y el desarrollo de aplicaciones. Siempre me ha gustado aprender tecnologías nuevas pero mi fuerte es el desarrollo de front-end con React & NEXT.js. Soy una persona autodidacta y resolutiva. Gracias a mis experiencias he podido trabajar en un equipo coordinado y bajo presión. Siempre busco cumplir el objetivo que me propongo.
+              Desarrollador Full Stack de 26 años con experiencia profesional en React y NestJS, especializado en desarrollo web, automatización de pruebas E2E (Cypress, Cucumber) e integración de IA. Lideré de forma autónoma un proyecto completo — arquitectura, backend, frontend y comunicación con cliente — lo que me dio visión real del ciclo completo de desarrollo. En los últimos meses he ampliado mi perfil hacia el <strong>Data Engineering</strong> con dbt, Snowflake, Python y CI/CD, respaldado por certificaciones oficiales. Trabajo en equipos multidisciplinares bajo Scrum con JIRA, aportando tanto en frontend como en backend y capa de datos.
             </p>
 
             <div class="custom-btn-group mt-4">
@@ -135,8 +220,8 @@
         </div>
 
         <div class="col-lg-5 col-md-12 col-12">
-          <div class="about-image svg">
-            <img src="images/undraw/undraw_programmer_re_owql.svg" class="img-fluid" alt="svg image">
+          <div class="profile-photo-wrapper">
+            <div class="profile-photo" role="img" aria-label="Francisco Ortega Velasco"></div>
           </div>
         </div>
 
@@ -246,6 +331,101 @@
     </div>
   </section>
 
+  <!-- TECNOLOGÍAS -->
+  <section class="resume py-5" id="technologies">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-4">
+          <h2>Tecnologías</h2>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="tech-category">
+            <h5>Frontend</h5>
+            <div class="tech-grid">
+              <span class="tech-pill"><span class="iconify" data-icon="logos:react" style="font-size:18px;"></span> React</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:nextjs-icon" style="font-size:18px;"></span> Next.js</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:javascript" style="font-size:18px;"></span> JavaScript</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:typescript-icon" style="font-size:18px;"></span> TypeScript</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:html-5" style="font-size:18px;"></span> HTML5</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:css-3" style="font-size:18px;"></span> CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="tech-category">
+            <h5>Backend</h5>
+            <div class="tech-grid">
+              <span class="tech-pill"><span class="iconify" data-icon="logos:nestjs" style="font-size:18px;"></span> NestJS</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:nodejs-icon" style="font-size:18px;"></span> Node.js</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:typescript-icon" style="font-size:18px;"></span> TypeScript</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:directus" style="color:#6644FF; font-size:18px;"></span> Directus</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:postgresql" style="font-size:18px;"></span> PostgreSQL</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:mysql" style="font-size:18px;"></span> MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Engineering -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="tech-category">
+            <h5>Data Engineering</h5>
+            <div class="tech-grid">
+              <span class="tech-pill"><span class="iconify" data-icon="logos:python" style="font-size:18px;"></span> Python</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:dbt" style="color:#FF694B; font-size:18px;"></span> dbt</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:snowflake" style="color:#29B5E8; font-size:18px;"></span> Snowflake</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:googlebigquery" style="color:#4285F4; font-size:18px;"></span> BigQuery</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:powerbi" style="color:#F2C811; font-size:18px;"></span> Power BI</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:mysql" style="font-size:18px;"></span> SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testing -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="tech-category">
+            <h5>Testing</h5>
+            <div class="tech-grid">
+              <span class="tech-pill"><span class="iconify" data-icon="logos:cypress" style="font-size:18px;"></span> Cypress</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:cucumber" style="color:#23D96C; font-size:18px;"></span> Cucumber</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:cucumber" style="color:#23D96C; font-size:18px;"></span> Gherkin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="tech-category">
+            <h5>Herramientas &amp; DevOps</h5>
+            <div class="tech-grid">
+              <span class="tech-pill"><span class="iconify" data-icon="logos:git-icon" style="font-size:18px;"></span> Git</span>
+              <span class="tech-pill"><span class="iconify" data-icon="mdi:github" style="font-size:18px; color:#333;"></span> GitHub</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:github-actions" style="font-size:18px;"></span> GitHub Actions</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:docker-icon" style="font-size:18px;"></span> Docker</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:gitlab" style="color:#FC6D26; font-size:18px;"></span> GitLab</span>
+              <span class="tech-pill"><span class="iconify" data-icon="logos:jira" style="font-size:18px;"></span> JIRA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IA -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="tech-category">
+            <h5>Inteligencia Artificial</h5>
+            <div class="tech-grid">
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:openai" style="color:#333; font-size:18px;"></span> OpenAI API</span>
+              <span class="tech-pill"><span class="iconify" data-icon="simple-icons:anthropic" style="color:#c96442; font-size:18px;"></span> Claude API</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- PROYECTOS -->
   <section class="resume py-5" id="projects">
     <div class="container">
@@ -273,7 +453,7 @@
             </div>
             <div class="project-card-body">
               <p>
-                Pipeline de Data Engineering sobre el catálogo de cartas de <strong>Yu-Gi-Oh!</strong> con arquitectura medallion (Bronze → Silver → Gold). Implementa ingesta automática diaria desde la API pública de YGOPRODeck, simulación de precios mediante <strong>Movimiento Browniano</strong>, tres casos de uso analíticos (evolución de precios, arbitraje y popularidad) y un sistema completo de CI/CD con GitHub Actions y 225 tests automatizados.
+                Pipeline de Data Engineering sobre el catálogo de cartas de <strong>Yu-Gi-Oh!</strong> con arquitectura medallion (Bronze → Silver → Gold). Implementa ingesta automática diaria desde la API pública de YGOPRODeck, simulación de precios mediante <strong>Movimiento Browniano</strong>, tres casos de uso analíticos (evolución de precios, arbitraje y popularidad) y un sistema completo de CI/CD con GitHub Actions.
               </p>
             </div>
             <div class="project-card-footer">
